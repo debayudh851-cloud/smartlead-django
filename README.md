@@ -35,3 +35,8 @@ Source: [X Education lead-scoring dataset](https://www.kaggle.com/datasets/laksh
 Held-out education data: ROC-AUC about 0.8000; accuracy at threshold .5 about 0.7576. See ml/artifacts/metrics.json for full evaluation and limitations. These results do not establish digital-service conversion accuracy. Predictions carry is_demo=true and model_version.
 
 Production hosting, manual Postman execution, real SMTP delivery and separate React integration are not claimed. See setup for deployment prerequisites.
+
+
+## User, admin and superuser portals
+
+Separate interfaces are available at `/user/`, `/admin-portal/` and `/superuser/`. Admin registration requires superuser approval before requirement access. See [role portal guide](docs/ROLE_PORTALS.md) for PostgreSQL relationships, registration, role-specific login and API endpoints. Apply migrations when updating an existing installation.
