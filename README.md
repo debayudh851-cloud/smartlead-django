@@ -36,7 +36,6 @@ Held-out education data: ROC-AUC about 0.8000; accuracy at threshold .5 about 0.
 
 Production hosting, manual Postman execution, real SMTP delivery and separate React integration are not claimed. See setup for deployment prerequisites.
 
+## Employee admin access
 
-## User, admin and superuser portals
-
-Separate interfaces are available at `/user/`, `/admin-portal/` and `/superuser/`. Admin registration requires superuser approval before requirement access. See [role portal guide](docs/ROLE_PORTALS.md) for PostgreSQL relationships, registration, role-specific login and API endpoints. Apply migrations when updating an existing installation.
+Only users can sign up. Company admin accounts and credential recovery are managed by the superuser, with temporary passwords that must be replaced before requirement access. See `docs/ROLE_PORTALS.md` (or `ROLE_PORTALS.md` from this docs folder) for the current API and PostgreSQL relationships. Public admin signup, token-based admin reset and old admin-registration approval routes have been retired. Apply migrations before running this version.
